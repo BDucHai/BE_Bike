@@ -22,7 +22,7 @@ public interface BikeRepository extends JpaRepository<Bike, Long>{
       AND (:maxSpeed IS NULL OR b.maxSpeed = :maxSpeed)
       AND (:manufactureYear IS NULL OR b.manufactureYear = :manufactureYear)
       AND (:model IS NULL OR LOWER(b.model) LIKE LOWER(CONCAT('%', :model, '%')))
-      AND (:brand IS NULL OR LOWER(b.model) LIKE LOWER(CONCAT('%', :brand, '%')))
+      AND (:brand IS NULL OR LOWER(b.brand) LIKE LOWER(CONCAT('%', :brand, '%')))
       AND (:name IS NULL OR LOWER(b.name) LIKE LOWER(CONCAT('%', :name, '%')))
       AND (:state IS NULL OR b.state = :state)
 """)
